@@ -17,8 +17,8 @@ main.help:
 	@echo ''
 
 requirements:
-	pip install -qr requirements/pip.txt --exists-action w
-	pip install -qr requirements.txt --exists-action w
+	pip install -r requirements/pip.txt --exists-action w
+	pip install -r requirements.txt --exists-action w
 
 COMMON_CONSTRAINTS_TXT=requirements/common_constraints.txt
 .PHONY: $(COMMON_CONSTRAINTS_TXT)
