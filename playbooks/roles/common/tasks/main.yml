@@ -224,12 +224,13 @@
 
   # TODO: restarts no matter which template has changed, need to examine
   # the results
-- name: restart rsyslogd
-  service:
-    name: rsyslog
-    state: restarted
-  become: True
-  when: config_templates.changed and docker_container.stdout != 'yes'
+  # Neelay Commented out
+  #- name: restart rsyslogd
+  #  service:
+  #    name: rsyslog
+  #    state: restarted
+  #  become: True
+  #  when: config_templates.changed and docker_container.stdout != 'yes'
 
 - name: Add ntp alert script
   template:
